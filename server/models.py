@@ -30,18 +30,6 @@ class City(db.Model, SerializerMixin):
     # Serializer
     serialize_rules = ('-concities', '-food')
 
-    # Validations
-    # @validates('number_of_players')
-    # def validate_number_of_players(self, key, value):
-    #     if not (1 <= int(value) <= 8):
-    #         raise ValueError('Number of players must be an integer between 1 and 8.')
-    #     return value
-
-    # @validates('release_year')
-    # def validate_release_year(self, key, value):
-    #     if not (1990 <= int(value) <= 2024):
-    #         raise ValueError('Game release year must be a valid year')
-    #     return value
 
     # @validates('description')
     # def validate_description(self, key, value):
@@ -49,12 +37,6 @@ class City(db.Model, SerializerMixin):
     #         raise ValueError('Description must be between 25 and 1000 characters')
     #     return value
 
-    # @validates('genre')
-    # def validate_genre(self, key, value):
-    #     genres = ['Action', 'Adventure', "Action-Adventure", 'Puzzle', 'RPG', 'Simulator', 'Strategy', 'Sports', 'Shooter', 'Platformer', "Racing", "Horror", "Fighting", "Party", "Stealth", "Sandbox"]
-    #     if not value in genres:
-    #         raise ValueError(f'{value} is not a valid genre.')
-    #     return value
 
 class Continent(db.Model, SerializerMixin):
     __tablename__ = 'continents'
@@ -72,19 +54,13 @@ class Continent(db.Model, SerializerMixin):
     serialize_rules = ('-concities',)
 
     # Validations
-    # @validates('manufacturer')
-    # def validate_manufacturer(self, key, value):
-    #     types = ['Nintendo', 'Sony', 'Microsoft']
-    #     if not value in types:
-    #         raise ValueError(f'{key} must be one of the following options: {types}')
-    #     return value
+    @validates('belongs')
+    def validate_manufacturer(self, key, value):
+        conts = ['Europe', 'Asia', 'Africa', 'Australia and Ocenia', 'North America', 'South America']
+        if not value in conts:
+            raise ValueError(f'{key} must be one of the following options: {conts}')
+        return value
 
-    # @validates('type')
-    # def validate_type(self, key, value):
-    #     types = ['Console', 'Handheld', 'PC']
-    #     if not value in types:
-    #         raise ValueError(f'{key} must be one of the following options: {types}')
-    #     return value
     
 class Food(db.Model, SerializerMixin):
     __tablename__ = 'foods'
@@ -105,11 +81,11 @@ class Food(db.Model, SerializerMixin):
     serialize_rules = ('-city',)
 
     # Validations
-    # @validates('name')
-    # def validate_name(self, key, value):
-    #     if not value:
-    #         raise ValueError(f'Developer must have a valid {key}.')
-    #     return value
+    @validates('name')
+    def validate_name(self, key, value):
+        if not value:
+            raise ValueError(f'Food must have a valid {key}.')
+        return value
 
 class Concities(db.Model, SerializerMixin):
     __tablename__ = 'concities'
@@ -127,11 +103,11 @@ class Concities(db.Model, SerializerMixin):
     serialize_rules = ('-city', '-continent')
 
     # Validations
-    # @validates('name', 'game_id', 'device_id')
-    # def validate_mission_info(self, key, value):
-    #     if not value:
-    #         raise ValueError(f'Geedee must have a {key}.')
-    #     return value
+    @validates('city_id', 'continent_id')
+    def validate_concities_info(self, key, value):
+        if not value:
+            raise ValueError(f'Concities must have a {key}.')
+        return value
 
 # class User(db.Model):
 #     __tablename__ = 'users'
@@ -139,6 +115,3 @@ class Concities(db.Model, SerializerMixin):
 #     id = db.Column(db.Integer, primary_key=True)
 #     username = db.Column(db.String, nullable=False, unique=True)
 #     password_hash = db.Column(db.String)
-
-#     def get(self):
-#         pass
