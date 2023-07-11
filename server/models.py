@@ -17,7 +17,7 @@ class City(db.Model, SerializerMixin):
     name = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False)
     language = db.Column(db.String, nullable=False)
-    description = db.Column(db.String,nullable=False)
+    description = db.Column(db.String, nullable=False)
 
     # food_id = db.Column(db.Integer, db.ForeignKey('foods.id'))
 
@@ -53,13 +53,13 @@ class Continent(db.Model, SerializerMixin):
     # Serializer
     serialize_rules = ('-concities',)
 
-    # Validations
-    @validates('belongs')
-    def validate_manufacturer(self, key, value):
-        conts = ['Europe', 'Asia', 'Africa', 'Australia and Ocenia', 'North America', 'South America']
-        if not value in conts:
-            raise ValueError(f'{key} must be one of the following options: {conts}')
-        return value
+    # # Validations
+    # @validates('belongs')
+    # def validate_manufacturer(self, key, value):
+    #     conts = ['Europe', 'Asia', 'Africa', 'Australia and Ocenia', 'North America', 'South America']
+    #     if not value in conts:
+    #         raise ValueError(f'{key} must be one of the following options: {conts}')
+    #     return value
 
     
 class Food(db.Model, SerializerMixin):
