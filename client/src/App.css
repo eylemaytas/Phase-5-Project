@@ -1,6 +1,6 @@
 body {
-  /* background-color: #222; */
-  background-image: url("https://images3.alphacoders.com/610/610747.jpg");
+  background-color: white;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,18 +15,9 @@ body {
   padding-left: 15%;
   padding-right: 15%;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.footer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20%;
-  font-size: 12px;
-  color: #fff;
-}
 
 .header {
   display: flex;
@@ -60,7 +51,7 @@ body {
   border: 2px solid #333;
   border-radius: 5px;
   transition: all 0.2s ease;
-  background-color: #00AD00;
+  background-color: lightpink;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color:#222
 }
@@ -101,19 +92,19 @@ body {
   padding-top: 30%;
 }
 
-.device-card img {
-  max-width: 200px;
+.continent-card img {
+  max-width: 400px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.device-card p {
+.continent-card p {
   font-size: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
 }
 
-.device-card {
+.continent-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,30 +113,30 @@ body {
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* background-color: #f2f2f2; */
-  background-image: linear-gradient(#f2f2f2, #6f6f6f);
+  background-image: linear-gradient( #6f6f6f);
   padding: 10px;
   border-radius: 5px;
-  color: #333;
+  color: white;
   width: auto;
 }
 
-.device-card:hover {
+.continent-card:hover {
   background-color: #ffffff;
-  border-color: #00AD00;
+  border-color: white;
   border-width: 2px;
   border-style: solid;
 }
 
-.device-grid {
+.continent-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   padding: 2%;
-}
+} 
 
-.game-grid {
+.city-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -154,34 +145,36 @@ body {
   margin: 2%;
 }
 
-.game-card img {
-  max-width: 100px;
+.city-card img {
+  max-width: 500px;
 }
 
-.game-card {
-  display: flex;
+.city-card {
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
   text-align: center;
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: #f2f2f2; */
-  background-image: linear-gradient(#545454, #f2f2f2);
+  background-color: #f2f2f2;
+  background-image: linear-gradient(#545454);
   padding: 10px;
   border-radius: 5px;
   color: #333;
   width: auto;
-}
+} 
 
-.game-card:hover {
+.city-card:hover {
   background-color: #ffffff;
-  border-color: #00AD00;
+  border-color: lightpink;
   border-width: 2px;
   border-style: solid;
-}
+} 
 
-.developer-grid {
+
+
+.food-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -190,13 +183,13 @@ body {
   padding: 2%;
 }
 
-.developer-card img {
+.food-card img {
   max-width: 200px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.developer-card {
+.food-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,9 +203,9 @@ body {
   color: #333;
 }
 
-.developer-card:hover {
+.food-card:hover {
   background-color: #ffffff;
-  border-color: #00AD00;
+  border-color: lightpink;
   border-width: 2px;
   border-style: solid;
 }
@@ -224,13 +217,15 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  border: 2px solid #333;
+  /* border: 2px solid #333;
   border-radius: 5px;
-  background-color: #00AD00;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
+  background-color: lightpink; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
 }
+
 
 .nav-item {
   padding: 5px 10px;
@@ -240,7 +235,9 @@ body {
   transition: font-size 0.2s ease;
 }
 
-.device-focus-page {
+
+
+.continent-focus-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -257,24 +254,24 @@ body {
   margin-top: 50px;
 }
 
-.device-focus-page div {
+.continent-focus-page div {
   margin: 2%;
 }
 
-.device-focus-page img {
+.continent-focus-page img {
   max-width: 300px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.device-focus-card img {
+.continent-focus-card img {
   max-width: 50px;
   margin-right: 10%;
   margin-left: 2%;
   margin-top: 2%;
 }
 
-.device-focus-card p {
+.continent-focus-card p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   margin-top: 5px;
@@ -282,46 +279,46 @@ body {
   font-size: 20px;
 }
 
-.device-focus-card {
+.continent-focus-card {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   text-align: left;
-  background-color: #333;
+  background-color: lightgray;
   color: #f2f2f2;
   border-radius: 5px;
   margin: 2%;
 }
 
-.developer-focus-page {
+.food-focus-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.developer-focus-page div {
+.food-focus-page div {
   margin: 2%;
 }
 
-.developer-focus-page img {
+.food-focus-page img {
   max-width: 300px;
 }
 
-.developer-focus-card img {
+.food-focus-card img {
   max-width: 50px;
 }
 
-.developer-focus-card {
+.food-focus-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.game-focus {
+.city-focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,12 +335,12 @@ body {
   padding: 3%;
 }
 
-.game-focus-img {
+.city-focus-img {
   max-width: 300px;
   margin: 2%;
 }
 
-.game-focus p {
+.city-focus p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   margin-top: 25px;
@@ -351,8 +348,8 @@ body {
   font-size: 15px;
 }
 
-.manufacturer-title {
-  color: #00AD00;
+.belongs-title {
+  color: lightpink;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
