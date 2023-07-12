@@ -208,28 +208,7 @@ class Concitiess(Resource):
 
 api.add_resource(Concitiess, '/concitiess')
 
-# class CityFocus(Resource):
-#     def city_focus(id):
-#         city = City.query.get(id)
-#         if not city:
-#             return jsonify({'error': 'City not found'}), 404
-#         response_body = {
-#             'name': city.name,
-#             'image': city.image,
-#             'description': city.description,
-#             'language': city.language,
-#             'foods': []
-#     }
-#         for food in city.foods:
-#             response_body['foods'].append({
-#             'name': food.name,
-#             'image': food.image,
-#             'description': food.description,
-#             'restaurant_recommendation': food.restaurant_recommendation
-#         })
-#         return jsonify(response_body), 200
 
-# api.add_resource(CityFocus, '/cityfocus/<int:id>')
 
 if __name__ == '__main__':
     app.run(port=7001, debug=True)

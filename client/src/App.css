@@ -1,4 +1,159 @@
-body {
+.continent-card {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.continent-card img {
+  max-width: 113%;
+  height: 400px;
+  width:500px;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.continent-card h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.continent-grid {
+  text-align: center;
+}
+
+
+
+
+
+
+.city-card {
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.city-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.city-card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.city-card p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.user-input label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.city-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.city-form form {
+  display: inline-block;
+  text-align: left;
+}
+
+.city-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.city-form button {
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.user-input {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.user-input h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.user-input form {
+  display: inline-block;
+  text-align: left;
+}
+
+.user-input input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.user-input button {
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+
+.nav-bar {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 150px;
+}
+
+.nav-bar a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  margin: 30px;
+}
+
+.nav-bar a:hover {
+  color: #999;
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   background-color: white;
 
   background-repeat: no-repeat;
@@ -113,13 +268,13 @@ body {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   /* background-color: #f2f2f2; */
-  background-image: linear-gradient( #6f6f6f);
+ /* background-image: linear-gradient( #6f6f6f);
   padding: 10px;
   border-radius: 5px;
   color: black;
   width: auto;
-}
-
+} */
+/*
 .continent-card:hover {
   background-color: #ffffff;
   border-color: white;
@@ -216,16 +371,16 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
+  padding: 10px; */
   /* border: 2px solid #333;
   border-radius: 5px;
   background-color: lightpink; */
-  font-family: "Montserrat", sans-serif;
+  /*font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
-}
-
+} */
+/*
 
 .nav-item {
   padding: 5px 10px;
@@ -369,4 +524,4 @@ body {
 
 .relationship-grid img{
   max-width: 150px;
-}
+} */
