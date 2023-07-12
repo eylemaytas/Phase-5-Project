@@ -6,6 +6,7 @@ function City({city, cityFocusSelector}) {
         <div className="city-card">
             <img onClick={cityFocusSelector} src={city.image} alt={city.id} />
             <h2>{city.name}</h2>
+            <p>Language: {city.language}</p>
         </div>
     )
 }

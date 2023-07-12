@@ -12,10 +12,8 @@ import Nav from './Nav';
 import ContinentFocus from './ContinentFocus';
 import FoodFocus from './FoodFocus';
 import CityFocus from './CityFocus';
-import BelongsFocus from './BelongsFocus';
+// import BelongsFocus from './BelongsFocus';
 import Search from './Search';
-import RelationshipManager from './RelationshipManager';
-import NewRelationship from './NewRelationship';
 import NewCityForm from './NewCityForm';
 import NewFoodForm from './NewFoodForm';
 
@@ -32,7 +30,6 @@ function App() {
   const [focusBelongs, setFocusBelongs] = useState('')
   const [formData, setFormData] = useState({})
   const [searchText, setSearchText] = useState('')
-  // const [online, setOnline] = useState('')
   const [newRelationship, setNewRelationship] = useState({})
 
   function addCity(event){
@@ -154,7 +151,8 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/home">
-          <Homepage belongsFocusSelector={belongsFocusSelector}/>
+          <Homepage continentFocusSelector={continentFocusSelector}/>
+          {/* <Homepage belongsFocusSelector={belongsFocusSelector}/> */}
         </Route>
         <Route exact path="/continents">
           <ContinentList continentFocusSelector={continentFocusSelector} continents={continents}/>
@@ -165,8 +163,8 @@ function App() {
           <CityList cities={filteredCities} cityFocusSelector={cityFocusSelector} />
         </Route>
         <Route exact path="/foods">
-          <FoodList foods={foods} foodFocusSelector={foodFocusSelector} />
           <NewFoodForm updateFormData={updateFormData} addFood={addFood}/>
+          <FoodList foods={foods} foodFocusSelector={foodFocusSelector} />
         </Route>
         <Route exact path="/continentfocus">
           <ContinentFocus focusContinent={focusContinents} />
@@ -177,15 +175,9 @@ function App() {
         <Route exact path="/cityfocus">
           <CityFocus focusCity={focusCity}/>
         </Route>
-        <Route exact path='/belongsfocus'>
+        {/* <Route exact path='/belongsfocus'>
           <BelongsFocus continentFocusSelector={continentFocusSelector} focusBelongs={focusBelongs} />
-        </Route>
-        <Route exact path='/relationships'>
-          <RelationshipManager relationshipButton={relationshipButton} />
-        </Route>
-        <Route exact path='/relationships/new_relationship'>
-          <NewRelationship addRelationship={addRelationship} updateNewRelationship={updateNewRelationship}/>
-        </Route>
+        </Route> */}
       </Switch>
     </div>
   );

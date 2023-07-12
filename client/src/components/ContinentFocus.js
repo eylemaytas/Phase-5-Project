@@ -25,7 +25,7 @@ function ContinentFocus({focusContinent}) {
         <div className="continent-focus-page">
             <h2>{selectedContinent.name}</h2>
             <img src={selectedContinent.image} alt="continentimage" />
-            {/* <h2>These games are available:</h2> */}
+            <h2>Popular cities in this continent:</h2>
             {focusCard}
         </div>
     )

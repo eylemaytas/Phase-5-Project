@@ -63,7 +63,7 @@ class CityById(Resource):
         for continent in city.continents:
             continent_dict = continent.to_dict()
             continents_list.append(continent_dict)
-        food_list = [city.food.to_dict()]
+        food_list = [food.to_dict() for food in city.food]
         response_body.update({
             "continents": continents_list,
             "foods": food_list
@@ -123,25 +123,27 @@ class Foods(Resource):
         except ValueError:
             response_body = {'errors': ['validation errors']}
             return make_response(jsonify(response_body), 400)
+    
+  
+
 
 api.add_resource(Foods, '/foods')
 
-class FoodsById(Resource):
 
+class FoodsById(Resource):
     def get(self, id):
         food = Food.query.filter(Food.id == id).first()
         if not food:
             response_body = {'error': 'Food not found'}
             return make_response(jsonify(response_body), 404)
         response_body = food.to_dict()
-        cities_list = []
-        for city in food.cities:
-            city_dict = city.to_dict()
-            cities_list.append(city_dict)
+        cities_list = [food.city.to_dict()]
         response_body.update({'cities': cities_list})
         return make_response(jsonify(response_body), 200)
 
 api.add_resource(FoodsById, '/foods/<int:id>')
+
+
 
 class Continents(Resource):
 
@@ -201,8 +203,33 @@ class Concitiess(Resource):
         except ValueError:
             response_body = {'errors': ['validation errors']}
             return make_response(jsonify(response_body), 400)
+        
+
 
 api.add_resource(Concitiess, '/concitiess')
+
+# class CityFocus(Resource):
+#     def city_focus(id):
+#         city = City.query.get(id)
+#         if not city:
+#             return jsonify({'error': 'City not found'}), 404
+#         response_body = {
+#             'name': city.name,
+#             'image': city.image,
+#             'description': city.description,
+#             'language': city.language,
+#             'foods': []
+#     }
+#         for food in city.foods:
+#             response_body['foods'].append({
+#             'name': food.name,
+#             'image': food.image,
+#             'description': food.description,
+#             'restaurant_recommendation': food.restaurant_recommendation
+#         })
+#         return jsonify(response_body), 200
+
+# api.add_resource(CityFocus, '/cityfocus/<int:id>')
 
 if __name__ == '__main__':
     app.run(port=7001, debug=True)

@@ -18,13 +18,15 @@ function FoodFocus({focusFood}) {
     }
 
     const focusCard = selectedFood.cities.map(city => {
-        return <FoodFocusCard city={city}/>
+        return <FoodFocusCard key={city.id} city={city}/>
     })
 
     return(
         <div className="continent-focus-page">
             <h2>{selectedFood.name}</h2>
-            <img src={selectedFood.image} alt="image" />
+            <img src={selectedFood.image} alt="food" />
+            <p>{selectedFood.description}</p>
+            <p>You should try it at {selectedFood.restaurant_recommendation} Restaurant.</p>
             {focusCard}
         </div>
     )

@@ -25,10 +25,13 @@ class City(db.Model, SerializerMixin):
     concities = db.relationship('Concities', back_populates='city', cascade='all, delete-orphan')
     # food = db.relationship('Food', back_populates='cities')
     food = db.relationship('Food', back_populates='city')
+
+
     continents = association_proxy('concities', 'continent', creator=lambda c: Concities(continent=c))
 
     # Serializer
     serialize_rules = ('-concities', '-food')
+
 
 
     # @validates('description')
@@ -77,6 +80,11 @@ class Food(db.Model, SerializerMixin):
     # Relationships
     # cities = db.relationship('City', back_populates='food', cascade='all, delete-orphan')
     city = db.relationship('City', back_populates='food')
+
+
+
+
+    
     # Serializer
     serialize_rules = ('-city',)
 
@@ -108,6 +116,34 @@ class Concities(db.Model, SerializerMixin):
         if not value:
             raise ValueError(f'Concities must have a {key}.')
         return value
+
+
+# class Blog(db.Model, SerializerMixin):
+#     __tablename__='blogs'
+
+#     id = db.Column(db.Integer, primary_key=True)
+#     title = db.Column(db.String, nullable=False)
+#     image = db.Column(db.String, nullable=False)
+#     blog_post = db.Column(db.String, nullable=False)
+#     like_count = db.Column(db.Integer, nullable=False)
+
+#     user_id = db.relationship('User', back_populates='blog')
+
+# class User(db.Model):
+#     __tablename__ = 'users'
+
+#     id = db.Column(db.Integer, primary_key=True)
+#     first_name = db.Column(db.String, nullable=False)
+#     last_name = db.Column(db.String, nullable=False)
+#     username = db.Column(db.String, nullable=False, unique=True)
+#     password = db.Column(db.String, nullable=False)
+
+    
+
+
+
+
+
 
 # class User(db.Model):
 #     __tablename__ = 'users'
