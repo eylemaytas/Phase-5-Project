@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function NewFoodForm({addFood, updateFormData}){
+function NewFoodForm({addFood, updateNewFood}){
 
     const [formSubmitted, setFormSubmitted] = useState(false)
 
@@ -14,22 +14,22 @@ function NewFoodForm({addFood, updateFormData}){
                     setFormSubmitted(formSubmitted => !formSubmitted)
                 })}>
                     <div className="form-group">
-                        <label for="foodname">Food Name</label><br></br>
-                        <input onChange={updateFormData} type="text" id="name" name="foodname"></input>
+                        <label htmlFor="foodname">Food Name</label><br></br>
+                        <input onChange={updateNewFood} type="text" id="name" name="foodname"></input>
                     </div>
                     <div className="form-group">
-                        <label for="foodimage">Food Image</label><br></br>
-                        <input onChange={updateFormData} type="text" id="image" name="foodimage"></input>
+                        <label htmlFor="foodimage">Food Image</label><br></br>
+                        <input onChange={updateNewFood} type="text" id="image" name="foodimage"></input>
                     </div>
                     <div>
-                        <label for="form-group">
-                            <label for="description">Description</label><br></br>
-                            <input onChange={updateFormData} type="text" id="description" name="description"></input>
+                        <label htmlFor="form-group">
+                            <label htmlFor="description">Description</label><br></br>
+                            <input onChange={updateNewFood} type="text" id="description" name="description"></input>
                         </label>
                     </div>
                     <div className="form-group">
-                        <label for="citylanguage">Restaurant Recommendation</label><br></br>
-                        <input onChange={updateFormData} type="text" id="recom" name="restaurant"></input>
+                        <label htmlFor="citylanguage">Restaurant Recommendation</label><br></br>
+                        <input onChange={updateNewFood} type="text" id="recom" name="restaurant"></input>
                     </div>
                         <button type="submit">Add New Food</button>
                 </form>}

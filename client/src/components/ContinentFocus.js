@@ -9,7 +9,7 @@ function ContinentFocus({focusContinent}) {
         fetch(`http://127.0.0.1:7001/continents/${focusContinent}`)
         .then(res => res.json())
         .then(selectedContinent => setSelectedContinent(selectedContinent))
-      }, [])
+      }, [focusContinent])
 
     if(!selectedContinent.cities){
         return(

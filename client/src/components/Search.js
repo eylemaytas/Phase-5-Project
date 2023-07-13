@@ -16,10 +16,7 @@ function Search({setSearchText}) {
                     setSearchText(event.target.value)
                 }}
             />
-            <div>
-                <button onChange={setSearchText}>
-                </button>
-            </div>
+
         </div>
     )
 }

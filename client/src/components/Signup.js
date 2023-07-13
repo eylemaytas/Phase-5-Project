@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Login({attemptLogin}) {
+function Signup({attemptSignup}) {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -10,7 +10,7 @@ function Login({attemptLogin}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    attemptLogin({username, password})
+    attemptSignup({username, password})
   }
 
   return (
@@ -29,7 +29,7 @@ function Login({attemptLogin}) {
       />
 
       <input type="submit"
-      value='Login'
+      value='Signup'
       />
 
     </form>
@@ -37,35 +37,4 @@ function Login({attemptLogin}) {
 
 }
 
-export default Login
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-
-// function Login() {
-    
-//     return(
-//         <div className="user-input">
-//             <h2>Login/Signup</h2>
-//             <form>
-//                 <input type="text" name="username" placeholder="Username"/>
-//                 <input type="text" name="password" placeholder="Password"/>
-//                 <button className="login-button">Login/Signup</button>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default Login
+export default Signup

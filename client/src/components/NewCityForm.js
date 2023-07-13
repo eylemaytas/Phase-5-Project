@@ -14,20 +14,20 @@ function NewCityForm({addCity, updateFormData}){
                     setFormSubmitted(formSubmitted => !formSubmitted)
                 })}>
                     <div className="form-group">
-                        <label for="cityname">City Name</label><br></br>
+                        <label htmlFor="cityname">City Name</label><br></br>
                         <input onChange={updateFormData} type="text" id="name" name="cityname"></input>
                     </div>
                     <div className="form-group">
-                        <label for="cityimage">City Image</label><br></br>
+                        <label htmlFor="cityimage">City Image</label><br></br>
                         <input onChange={updateFormData} type="text" id="image" name="cityimage"></input>
                     </div>
                     <div className="form-group">
-                        <label for="citylanguage">City Language</label><br></br>
-                        <input onChange={updateFormData} type="text" id="genre" name="citylanguage"></input>
+                        <label htmlFor="citylanguage">City Language</label><br></br>
+                        <input onChange={updateFormData} type="text" id="language" name="citylanguage"></input>
                     </div>
                     <div>
-                        <label for="form-group">
-                            <label for="description">Description</label><br></br>
+                        <label htmlFor="form-group">
+                            <label htmlFor="description">Description</label><br></br>
                             <input onChange={updateFormData} type="text" id="description" name="description"></input>
                         </label>
                     </div>

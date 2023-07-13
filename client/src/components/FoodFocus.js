@@ -9,7 +9,7 @@ function FoodFocus({focusFood}) {
         fetch(`http://127.0.0.1:7001/foods/${focusFood}`)
         .then(res => res.json())
         .then(selectedFood => setSelectedFood(selectedFood))
-      }, [])
+      }, [focusFood])
 
     if(!selectedFood.cities){
         return(

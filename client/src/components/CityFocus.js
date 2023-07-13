@@ -9,7 +9,7 @@ function CityFocus({focusCity}) {
         fetch(`http://127.0.0.1:7001/cities/${focusCity}`)
         .then(res => res.json())
         .then(selectedCity => setSelectedCity(selectedCity), setCityContinents(selectedCity.continents))
-    }, [focusCity])
+    }, [])
 
     if(!selectedCity.continents){
         return(
@@ -36,7 +36,7 @@ function CityFocus({focusCity}) {
             <p>Language: {selectedCity.language}</p>
             <h2>The most popular food is:</h2>
             <div className="continent-focus-card">
-                <img src={selectedCity.foods[0].image}/>
+                <img src={selectedCity.foods[0].image} alt="cityy"/>
                 <p>{selectedCity.foods[0].name}</p>
             </div>
             <h2>{selectedCity.name} is in :</h2>

@@ -4,7 +4,7 @@ import Food from "./Food";
 function FoodList({foods, foodFocusSelector}) {
 
     const food = foods.map(food => {
-        return <Food food={food} foodFocusSelector={foodFocusSelector}/>
+        return <Food key={food.id} food={food} foodFocusSelector={foodFocusSelector}/>
     })
     return(
         <div className="food-grid">
