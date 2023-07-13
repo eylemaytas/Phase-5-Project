@@ -19,7 +19,6 @@ class City(db.Model, SerializerMixin):
     language = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
 
-    # food_id = db.Column(db.Integer, db.ForeignKey('foods.id'))
 
     # Relationships
     concities = db.relationship('Concities', back_populates='city', cascade='all, delete-orphan')
@@ -118,36 +117,45 @@ class Concities(db.Model, SerializerMixin):
         return value
 
 
-# class Blog(db.Model, SerializerMixin):
-#     __tablename__='blogs'
+class Blog(db.Model, SerializerMixin):
+    __tablename__ = 'blogs'
 
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String, nullable=False)
-#     image = db.Column(db.String, nullable=False)
-#     blog_post = db.Column(db.String, nullable=False)
-#     like_count = db.Column(db.Integer, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    image = db.Column(db.String, nullable=False)
+    blog_post = db.Column(db.String, nullable=False)
+    like_count = db.Column(db.Integer, nullable=False)
+    
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-#     user_id = db.relationship('User', back_populates='blog')
+#Relationships
+    user = db.relationship('User', back_populates='blogs')
 
-# class User(db.Model):
-#     __tablename__ = 'users'
 
-#     id = db.Column(db.Integer, primary_key=True)
-#     first_name = db.Column(db.String, nullable=False)
-#     last_name = db.Column(db.String, nullable=False)
-#     username = db.Column(db.String, nullable=False, unique=True)
-#     password = db.Column(db.String, nullable=False)
+#Serializer
+    serialize_rules = ('-user',)
 
     
 
+class User(db.Model, SerializerMixin):
+    __tablename__ = 'users'
 
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, nullable=False, unique=True)
+    password_hash= db.Column(db.String)
+    
+    def __repr__(self):
+        return f'<User id="{self.id}" username="{self.username}">'
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "pw": self.password_hash
+        }
+#Relationships
+    blogs = db.relationship('Blog', back_populates='user')
 
+#Serializer
+    serialize_rules = ('-blogs',)
 
-
-
-# class User(db.Model):
-#     __tablename__ = 'users'
-
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String, nullable=False, unique=True)
-#     password_hash = db.Column(db.String)

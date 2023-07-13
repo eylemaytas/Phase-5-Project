@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from app import app
-from models import db, City, Continent, Food, Concities
+from models import db, City, Continent, Food, Concities, Blog, User
 
 with app.app_context():
     
@@ -9,6 +9,7 @@ with app.app_context():
     Continent.query.delete()
     Food.query.delete()
     Concities.query.delete()
+    Blog.query.delete()
 
     foods = []
     
@@ -471,11 +472,28 @@ with app.app_context():
     concities.append(Concities(city_id=60, continent_id=6))  # Lisbon - South America
 
 
-    
+    blogs = []
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+    blogs.append(Blog(title="3 Days in Paris",image="https://upload.travelawaits.com/ta/uploads/2021/08/shutterstock_1720544590-1-800x800.jpg",blog_post="amazing timeeeeee",like_count="5",user_id="1"))
+
+
+
+    users = []
+
 
     db.session.add_all(foods)
     db.session.add_all(cities)
     db.session.add_all(continents)
     db.session.add_all(concities)
+    db.session.add_all(blogs)
+    db.session.add_all(users)
     db.session.commit()
     print("🌱 Successfully seeded! 🌱")

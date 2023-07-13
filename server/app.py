@@ -2,15 +2,16 @@
 
 import ipdb
 
-from flask import Flask, make_response, jsonify, request
+from flask import Flask, make_response, jsonify, request, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 from flask_cors import CORS
+from flask_bcrypt import Bcrypt
 
-from models import db, City, Continent, Concities, Food
-
+from models import db, City, Continent, Concities, Food, Blog, User
 app = Flask(__name__)
+app.secret_key = b'Y\xf1Xz\x00\xad|eQ\x80t \xca\x1a\x10K'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///travel.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
@@ -18,6 +19,55 @@ app.json.compact = False
 migrate = Migrate(app, db)
 
 db.init_app(app)
+
+bcrypt = Bcrypt(app)
+
+# bcrypt.generate_password_hash(password).decode('utf-8')
+# bcrypt.check_password_hash(hashed_password, password)
+
+def get_current_user():
+    return User.query.where( User.id == session.get("user_id") ).first()
+
+def logged_in():
+    return bool( get_current_user() )
+
+# USER SIGNUP #
+
+@app.post('/users')
+def create_user():
+    json = request.json
+    pw_hash = bcrypt.generate_password_hash(json['password']).decode('utf-8')
+    new_user = User(username=json['username'], password_hash=pw_hash)
+    db.session.add(new_user)
+    db.session.commit()
+    session['user_id'] = new_user.id
+    return new_user.to_dict(), 201
+
+
+
+# SESSION LOGIN/LOGOUT#
+
+@app.post('/login')
+def login():
+    json = request.json
+    user = User.query.where(User.username == json["username"]).first()
+    if user and bcrypt.check_password_hash(user.password_hash, json['password']):
+        session['user_id'] = user.id
+        return user.to_dict(), 201
+    else:
+        return {'message': 'Invalid username or password'}, 401
+
+@app.get('/current_session')
+def check_session():
+    if logged_in():
+        return get_current_user().to_dict(), 200
+    else:
+        return {}, 401
+
+@app.delete('/logout')
+def logout():
+    session['user_id'] = None
+    return {}, 204
 
 CORS(app)
 
@@ -203,12 +253,56 @@ class Concitiess(Resource):
         except ValueError:
             response_body = {'errors': ['validation errors']}
             return make_response(jsonify(response_body), 400)
-        
-
-
+    
 api.add_resource(Concitiess, '/concitiess')
 
+class Blogs(Resource):
+    def get(self):
+        blogs = Blog.query.all()
+        response_body = []
+        for blog in blogs:
+            response_body.append(blog.to_dict())
+        return make_response(jsonify(response_body), 200)
+
+    def post(self):
+        try:
+            data = request.get_json()
+            new_blog = Blog(
+                title = data.get('title'),
+                image = data.get('image'),
+                blog_post = data.get('blog_post'),
+                like_count = data.get('like_count'),
+                user_id = data.get('user_id')
+            )
+            db.session.add(new_blog)
+            db.session.commit()
+            response_body = new_blog.to_dict()
+            return make_response(jsonify(response_body), 200)
+        except ValueError:
+            response_body = {'errors': ['validation errors']}
+            return make_response(jsonify(response_body), 400)
+        
+api.add_resource(Blogs,'/blogs')
+
+
+class BlogsById(Resource):
+    def get(self, id):
+        blog = Blog.query.filter(Blog.id == id).first()
+        if not blog:
+            response_body = {'error': 'Blog not found'}
+            return make_response(jsonify(response_body), 404)
+
+        response_body = blog.to_dict() if blog else {}
+        users_list = [blog.user.to_dict()] if blog.user else []
+        response_body.update({'users': users_list})
+        return make_response(jsonify(response_body), 200)
+    
+api.add_resource(BlogsById, '/blogs/<int:id>')
 
 
 if __name__ == '__main__':
     app.run(port=7001, debug=True)
+
+
+
+
