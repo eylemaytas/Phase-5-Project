@@ -134,15 +134,14 @@ class Blog(db.Model, SerializerMixin):
 
 #Serializer
     serialize_rules = ('-user',)
-
     
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, nullable=False, unique=True)
-    password_hash= db.Column(db.String)
+    username = db.Column(db.String, unique=True)
+    password_hash = db.Column(db.String)
     
     def __repr__(self):
         return f'<User id="{self.id}" username="{self.username}">'
@@ -150,8 +149,7 @@ class User(db.Model, SerializerMixin):
     def to_dict(self):
         return {
             "id": self.id,
-            "username": self.username,
-            "pw": self.password_hash
+            "username": self.username
         }
 #Relationships
     blogs = db.relationship('Blog', back_populates='user')

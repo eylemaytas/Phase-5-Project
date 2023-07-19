@@ -20,7 +20,13 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 
+CORS(app)
+
+api = Api(app)
+
 bcrypt = Bcrypt(app)
+
+
 
 # bcrypt.generate_password_hash(password).decode('utf-8')
 # bcrypt.check_password_hash(hashed_password, password)
@@ -67,11 +73,9 @@ def check_session():
 @app.delete('/logout')
 def logout():
     session['user_id'] = None
-    return {}, 204
+    return {"message": "Successfully logged out!"}, 204
 
-CORS(app)
 
-api = Api(app)
 
 class Cities(Resource):
     
@@ -298,6 +302,8 @@ class BlogsById(Resource):
         return make_response(jsonify(response_body), 200)
     
 api.add_resource(BlogsById, '/blogs/<int:id>')
+
+
 
 
 if __name__ == '__main__':
