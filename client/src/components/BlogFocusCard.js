@@ -4,7 +4,7 @@ function BlogFocusCard({user}) {
 
     return(
         <div className="blog-focus-card">
-            <p>{user.username}</p> 
+            <p>Shared by:{user.username}.</p> 
         </div>
     )
 }

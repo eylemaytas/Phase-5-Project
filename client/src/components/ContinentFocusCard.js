@@ -4,8 +4,8 @@ function ContinentFocusCard({city}) {
 
     return(
         <div className="continent-focus-card">
-            <img src={city.image} alt="cityimage" />
             <p>{city.name}</p>
+            <img src={city.image} alt="cityimage" />
         </div>
     )
 }

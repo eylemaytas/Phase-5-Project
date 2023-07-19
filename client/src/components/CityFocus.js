@@ -19,7 +19,7 @@ function CityFocus({focusCity}) {
 
     const continents = selectedCity.continents.map(continent => {
         return (
-            <div className="continent-focus-card">
+            <div className="city-focus-card">
                 <img src={continent.image} alt={continent.id} />
                 <p>{continent.name}</p>
             </div>
@@ -35,7 +35,7 @@ function CityFocus({focusCity}) {
             <p>{selectedCity.description}</p>
             <p>Language: {selectedCity.language}</p>
             <h2>The most popular food is:</h2>
-            <div className="continent-focus-card">
+            <div className="city-focus-card1">
                 <img src={selectedCity.foods[0].image} alt="cityy"/>
                 <p>{selectedCity.foods[0].name}</p>
             </div>

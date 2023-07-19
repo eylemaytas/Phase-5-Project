@@ -1,3 +1,23 @@
+.nav-bar {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 150px;
+}
+
+.nav-bar a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  margin: 30px;
+}
+
+.nav-bar a:hover {
+  color: #999;
+  border-bottom: none;
+}
+
+/*homepage continents */
 .continent-card {
   display: inline-block;
   width: 400px;
@@ -30,381 +50,21 @@
 .continent-grid {
   text-align: center;
 }
-
-
-
-
-
-
-.city-card {
-  display: inline-block;
-  width: 300px;
-  height: auto;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-}
-
-.city-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.city-card h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.city-card p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
-.user-input label {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
-.city-form {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.city-form form {
-  display: inline-block;
-  text-align: left;
-}
-
-.city-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
-.city-form button {
-  padding: 10px 20px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-.user-input {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.user-input h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.user-input form {
-  display: inline-block;
-  text-align: left;
-}
-
-.user-input input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
-.user-input button {
-  padding: 10px 20px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
-
-
-.nav-bar {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 150px;
-}
-
-.nav-bar a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #000;
-  margin: 30px;
-}
-
-.nav-bar a:hover {
-  color: #999;
-  border-bottom: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-  background-color: white;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.user-input {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2%;
-}
-
-.header img {
-  width: 35%;
-  max-width: 300px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.smallest {
-  font-size: 8px;
-  color: #fff;
-}
-
-.login-button {
-  margin-top: 3%;
-  font-size: 16px;
-  padding: 8px 16px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  transition: all 0.2s ease;
-  background-color: lightpink;
-  font-family: "Montserrat", sans-serif;
-  color:#222
-}
-
-.login-button:hover {
-  font-size: 18px;
-  background-color: #fff;
-}
-
-.home-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.home1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.home1 img {
-  margin: 8%;
-}
-
-.home1 img:hover {
-  max-width: 35%;
-}
-
-.home-content img {
-  max-width: 30%;
-}
-
-.nav {
-  padding-left: 15%;
-  padding-top: 30%;
-}
-
-.continent-card img {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.continent-card p {
-  font-size: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-}
-
-.continent-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 12px;
-  font-family: "Montserrat", sans-serif;
-  /* background-color: #f2f2f2; */
- /* background-image: linear-gradient( #6f6f6f);
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
-  width: auto;
-} */
-/*
-.continent-card:hover {
-  background-color: #ffffff;
-  border-color: white;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.continent-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
-  padding: 2%;
-} 
-
-.city-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
-  margin: 2%;
-}
-
-.city-card img {
-  max-width: 500px;
-}
-
-.city-card {
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  text-align: center;
-  font-size: 12px;
-  font-family: "Montserrat", sans-serif;
-  background-color: #f2f2f2;
-  background-image: linear-gradient(#545454);
-  padding: 10px;
-  border-radius: 5px;
-  color: #333;
-  width: auto;
-} 
-
-.city-card:hover {
-  background-color: #ffffff;
-  border-color: lightpink;
-  border-width: 2px;
-  border-style: solid;
-} 
-
-
-
-.food-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
-  padding: 2%;
-}
-
-.food-card img {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.food-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 12px;
-  font-family: "Montserrat", sans-serif;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border-radius: 5px;
-  color: #333;
-}
-
-.food-card:hover {
-  background-color: #ffffff;
-  border-color: lightpink;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.nav-bar {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px; */
-  /* border: 2px solid #333;
-  border-radius: 5px;
-  background-color: lightpink; */
-  /*font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.8;
-} */
-/*
-
-.nav-item {
-  padding: 5px 10px;
-  color: #fff;
-  font-size: 16px;
-  margin-right: 10px;
-  transition: font-size 0.2s ease;
-}
-
-
-
+/* continent focus */
 .continent-focus-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  background-color: #f2f2f2;
-  padding: 10px;
+  /* background-color: #4B878BFF; */
+  background-color: #E3C9CEFF;
+  padding: 15px;
   border-radius: 5px;
-  color: #333;
-  width: 55%;
+  color: black;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -414,114 +74,384 @@
 }
 
 .continent-focus-page img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 10px;
+  max-width: 80%;
+  height: 400px;
+  margin: 20px 0;
 }
-
-.continent-focus-card img {
-  max-width: 50px;
-  margin-right: 10%;
-  margin-left: 2%;
-  margin-top: 2%;
-}
-
-.continent-focus-card p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
 .continent-focus-card {
+  position: relative;
   width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  text-align: left;
-  background-color: lightgray;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-color: #2A2B2DFF;
   color: #f2f2f2;
   border-radius: 5px;
   margin: 2%;
 }
 
-.food-focus-page {
+.continent-focus-card img {
+  max-width: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+} 
+
+.continent-focus-card p {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+} 
+
+.city-grid {
+  text-align: center;
+}
+.city-card {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.city-card img {
+  max-width: 113%;
+  height: 400px;
+  width:500px;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.city-card h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.city-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.city-form h2 {
+  font-size: 16px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-left: 70px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.form-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
-.food-focus-page div {
-  margin: 2%;
+.form-column {
+  flex: 1;
+  margin-right: 10px;
 }
 
-.food-focus-page img {
-  max-width: 300px;
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.food-focus-card img {
-  max-width: 50px;
+.form-group input {
+  width: 100%;
+  padding: 5px;
 }
 
-.food-focus-card {
+button[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.user-input {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  padding: 70px;
+  margin-left: 200px;
 }
 
+.user-input label {
+  margin-right: 0px;
+  font-size: 16px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 1px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 180px;
+}
+
+.user-input input {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  width: 500px;
+}
+ 
+/* cityfocus  */
 .city-focus {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 17px;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  background-color: #f2f2f2;
+  background-color: #E3C9CEFF;
+  padding: 15px;
   border-radius: 5px;
-  color: #333;
-  width: 55%;
+  color: black;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
-  text-align: center;
-  padding: 3%;
+}
+.city-focus p {
+  font-weight: bold;
+  padding: 10px;
+}
+.city-focus-img {
+  max-width: 80%;
+  height: 400px;
+  margin: 20px 0;
 }
 
-.city-focus-img {
-  max-width: 300px;
+.city-focus-card1 {
+  position: relative;
+  width: 80%;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* text-align: center; */
+  background-color: #2A2B2DFF;
+  color: #f2f2f2;
+  border-radius: 5px;
   margin: 2%;
 }
 
-.city-focus p {
+.city-focus-card1 img {
+  max-width: 70%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top:10px;
+  object-fit: cover;
+}
+
+.city-focus-card1 p {
+  padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.city-focus-card img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+
+
+/*food form */
+.food-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
 }
 
-.belongs-title {
-  color: lightpink;
-  text-align: center;
+.food-form h2 {
+  font-size: 16px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-left: 70px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-column {
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
   font-family: "Montserrat", sans-serif;
 }
 
-.relationship-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 15%;
-  grid-row-gap: 50px;
-  justify-content: center;
-  align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 5%;
+button[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.contact-form {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 5px;
+} 
+/* food page */
+.food-grid {
+  text-align: center;
+}
+.food-card {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
 
-.relationship-grid img{
-  max-width: 150px;
-} */
+.food-card img {
+  max-width: 113%;
+  height: 400px;
+  width:500px;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.food-card h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+/* food focus */
+.food-focus-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #E3C9CEFF;
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.food-focus-page p {
+  font-weight: bold;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.food-focus-page img {
+  max-width: 90%;
+  height: 500px;
+  margin: 20px 0;
+}
+
+.food-focus-card {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  background-color: #2A2B2DFF;
+  color: #f2f2f2;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+.food-focus-card p {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.food-focus-card img {
+  max-width: 200px;
+  max-height: 200px;
+  position: object-fit;
+}
+
+.food-card h3,p {
+  font-family: "Montserrat", sans-serif;
+}
+

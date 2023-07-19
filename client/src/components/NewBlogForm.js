@@ -7,7 +7,7 @@ function NewBlogForm({addBlog, updateNewBlog}){
     return(
         <div className="blog-form">
             <body className="blog-card">
-                <h2>Add A New Blog</h2>
+                <h2>Add A New Blog Post</h2>
                 {formSubmitted ? <h1>Your blog post has successfully added!</h1> :
                 <form className="contact-form" onSubmit={(event => {
                     addBlog(event)
