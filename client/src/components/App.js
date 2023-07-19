@@ -107,6 +107,14 @@ function App() {
     fetch('/logout', { method: 'DELETE' })
   }
 
+  const likeBlog = (blogId) => {
+    setBlogs((prevBlogs) =>
+      prevBlogs.map((blog) =>
+        blog.id === blogId ? { ...blog, like_count: blog.like_count + 1 } : blog
+      )
+    );
+  }
+
   function addCity(event){
     event.preventDefault()
 
@@ -225,7 +233,7 @@ function App() {
     <div className="app">
       <div className='header'>
       <Header />
-        <Nav />
+        <Nav currentUser={currentUser} logout={logout} setCurrentUser={setCurrentUser} />
       </div>
       <Switch>
         <Route exact path="/home">
@@ -235,17 +243,14 @@ function App() {
           <ContinentList continentFocusSelector={continentFocusSelector} continents={continents}/>
         </Route>
         <Route exact path="/cities">
-          <NewCityForm  updateFormData={updateFormData} addCity={addCity}/>
           <Search setSearchText={setSearchText}  />
           <CityList cities={filteredCities} cityFocusSelector={cityFocusSelector} />
         </Route>
         <Route exact path="/foods">
-          <NewFoodForm updateNewFood={updateNewFood} addFood={addFood}/>
           <FoodList foods={foods} foodFocusSelector={foodFocusSelector} />
         </Route>
         <Route exact path="/blogs">
-          <NewBlogForm updateNewBlog={updateNewBlog} addBlog={addBlog}/>
-          <BlogList blogs={blogs} blogFocusSelector={blogFocusSelector}/>
+          <BlogList blogs={blogs} blogFocusSelector={blogFocusSelector} likeBlog={likeBlog}/>
         </Route>
         <Route exact path="/continentfocus">
           <ContinentFocus focusContinent={focusContinents} />
@@ -259,6 +264,15 @@ function App() {
         <Route exact path="/blogfocus">
           <BlogFocus focusBlog={focusBlog} />
         </Route> 
+        <Route exact path="/add-blog">
+          {currentUser && <NewBlogForm updateNewBlog={updateNewBlog} addBlog={addBlog}/>}
+        </Route>
+        <Route exact path="/add-food">
+          {currentUser && <NewFoodForm updateNewFood={updateNewFood} addFood={addFood}/>}
+        </Route>
+        <Route exact path="/add-city">
+          {currentUser && <NewCityForm  updateFormData={updateFormData} addCity={addCity}/>}
+        </Route>
         <Route exact path="/login">
           { !currentUser ? <Login attemptLogin={attemptLogin} /> : null }
           { currentUser ? <UserDetails currentUser={currentUser} logout={logout} /> : null }
