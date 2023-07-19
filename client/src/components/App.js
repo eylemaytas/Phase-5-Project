@@ -176,9 +176,9 @@ function App() {
     history.push('/blogfocus')
   }
 
-  // function logoClick() {
-  //   history.push('/home')
-  // }
+  function logoClick() {
+    history.push('/continents')
+  }
 
   function updateFormData(event) {
     setFormData({...formData, [event.target.id]: event.target.value})
@@ -232,7 +232,7 @@ function App() {
   return (
     <div className="app">
       <div className='header'>
-      <Header />
+      <Header logoClick={logoClick}/>
         <Nav currentUser={currentUser} logout={logout} setCurrentUser={setCurrentUser} />
       </div>
       <Switch>
@@ -250,7 +250,7 @@ function App() {
           <FoodList foods={foods} foodFocusSelector={foodFocusSelector} />
         </Route>
         <Route exact path="/blogs">
-          <BlogList blogs={blogs} blogFocusSelector={blogFocusSelector} likeBlog={likeBlog}/>
+          <BlogList  blogs={blogs} blogFocusSelector={blogFocusSelector} likeBlog={likeBlog}/>
         </Route>
         <Route exact path="/continentfocus">
           <ContinentFocus focusContinent={focusContinents} />

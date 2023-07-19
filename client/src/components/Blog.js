@@ -19,7 +19,7 @@
 
 import React, { useState } from "react";
 
-function Blog({ blog, likeBlog }) {
+function Blog({ blog, likeBlog,blogFocusSelector }) {
   const [liked, setLiked] = useState(false);
 
   const handleLike = () => {
@@ -32,13 +32,13 @@ function Blog({ blog, likeBlog }) {
   return (
     <div className="blog-card">
       <h2>{blog.title}</h2>
-      <img src={blog.image} alt={blog.title} />
-      <p>{blog.blog_post}</p>
-      <div className="like-button">
-        <button onClick={handleLike} disabled={liked}>
+      <img onClick={blogFocusSelector} src={blog.image} alt={blog.id} />
+      <button onClick={handleLike} disabled={liked}>
           {liked ? "Liked ❤️" : "Like 👍"}
         </button>
-        <p>{blog.like_count} likes</p>
+      <p>{blog.like_count} likes</p>
+      <div className="like-button">
+        
       </div>
     </div>
   );

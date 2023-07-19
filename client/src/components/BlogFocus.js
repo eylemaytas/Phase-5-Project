@@ -18,7 +18,7 @@ function BlogFocus({focusBlog}) {
     }
 
     const focusCard = selectedBlog.users.map(user => {
-        return <BlogFocusCard key={user.id} user={user}/>
+        return <BlogFocusCard key={user.id} user={user} />
     })
 
     return(

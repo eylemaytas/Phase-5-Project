@@ -1,7 +1,19 @@
+.logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  max-width: 50%;
+  max-height: 50%;
+}
+
+
 .nav-bar {
   text-align: center;
   margin-bottom: 20px;
-  padding: 150px;
+  padding: 50px;
+  max-width: 100%;
+
 }
 
 .nav-bar a {
@@ -15,6 +27,40 @@
 .nav-bar a:hover {
   color: #999;
   border-bottom: none;
+}
+.nav-bar button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.user-details h2 {
+  font-size: 50px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-left: 600px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 590px;
+}
+
+.user-details button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 550px;
 }
 
 /*homepage continents */
@@ -454,4 +500,112 @@ button[type="submit"] {
 .food-card h3,p {
   font-family: "Montserrat", sans-serif;
 }
+
+
+
+.blog-card {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.blog-card img {
+  max-width: 113%;
+  height: 400px;
+  width:500px;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.blog-card h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.blog-grid {
+  text-align: center;
+}
+
+.blog-focus-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #4B878BFF; */
+  background-color: #E3C9CEFF;
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.blog-focus-page div {
+  margin: 2%;
+}
+
+.blog-focus-page img {
+  max-width: 80%;
+  height: 400px;
+  margin: 20px 0;
+}
+.blog-focus-card {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-color: #2A2B2DFF;
+  color: #f2f2f2;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+.blog-focus-card img {
+  max-width: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+} 
+
+.blog-focus-card p {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+} 
+.blog-card button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 

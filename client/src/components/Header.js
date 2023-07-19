@@ -1,24 +1,26 @@
-import React from "react";
-
-function Header() {
-
-    return(
-   <div>
-    
-   </div>
-    )
-}
-
-export default Header
-
-
 // import React from "react";
 
-// function Header({logoClick}) {
+// function Header() {
 
 //     return(
-//             <img onClick={logoClick} src="/assets/Logo-final.png" alt="Hi"/>
+//    <div>
+
+//    </div>
 //     )
 // }
 
 // export default Header
+
+
+import React from "react";
+
+function Header({logoClick}) {
+
+    return(
+        <div className="logo">
+            <img onClick={logoClick} src="/assets/travel.png" alt="Hi"/>
+        </div>
+    )
+}
+
+export default Header
