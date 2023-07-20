@@ -14,7 +14,7 @@ function Signup({attemptSignup}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='signup-form'>
 
       <input type="text"
       onChange={handleChangeUsername}

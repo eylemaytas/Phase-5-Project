@@ -1,7 +1,8 @@
 # Bon Vivant.
 
 ## Description
-....
+
+Welcome to the Bon Viant! This web application serves as a platform for travelers to share their experiences, stories, and recommendations with the world. The project offers several key features to enhance the travel blogging experience:
 
 
 ## Setup

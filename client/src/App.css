@@ -5,6 +5,8 @@
   /* width: 50%; */
   max-width: 50%;
   max-height: 50%;
+  margin-bottom: -70px;
+  margin-top:-120px;
 }
 
 
@@ -105,7 +107,6 @@
   text-align: center;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  /* background-color: #4B878BFF; */
   background-color: #E3C9CEFF;
   padding: 15px;
   border-radius: 5px;
@@ -191,28 +192,34 @@
   padding: 0;
   color: white;
 }
+
 .city-form {
   width: 70%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
 }
 
 .city-form h2 {
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  margin-left: 70px;
-  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 5px;
-  width: 150px;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto 20px;
 }
 
 .form-row {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .form-column {
@@ -220,56 +227,74 @@
   margin-right: 10px;
 }
 
-
 .form-group label {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
 }
 
 .form-group input {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button[type="submit"] {
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(0, 0, 0, 1);
 }
 
 
-.user-input {
+/* .user-input {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   padding: 70px;
   margin-left: 200px;
+  
+} */
+.user-input {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to horizontally center the input */
+  margin-bottom: 10px;
+  padding: 70px;
 }
 
+
 .user-input label {
-  margin-right: 0px;
+  margin-right: 10px;
   font-size: 16px;
-  padding: 10px;
+  padding: 7px;
   font-family: "Montserrat", sans-serif;
-  margin-left: 1px;
+  margin-left: 100px;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 5px;
-  width: 180px;
+  width: 130px;
 }
 
 .user-input input {
+  padding: 5px;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-right:20px;
+  margin-left:-70px;
+  margin-bottom: 30px;
   font-family: "Montserrat", sans-serif;
-  width: 500px;
+  width: 450px;
 }
  
 /* cityfocus  */
@@ -292,6 +317,13 @@ button[type="submit"] {
 .city-focus p {
   font-weight: bold;
   padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-right:50px;
+  margin-bottom:10px;
+  border-radius:5px;
+  background-color: #FFEDF8;
+  color: black;
+  font-size: 20px;
 }
 .city-focus-img {
   max-width: 80%;
@@ -341,70 +373,85 @@ button[type="submit"] {
 }
 
 
-
-
-/*food form */
 .food-form {
   width: 70%;
   margin: 0 auto;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
 }
 
-.food-form h2 {
-  font-size: 16px;
+.food-card1 {
+  text-align: center;
+}
+
+.food-card1 h2 {
+  font-size: 20px;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  margin-left: 70px;
-  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 5px;
-  width: 150px;
+  width: 200px;
+  margin: 0 auto 20px;
 }
 
-.form-row {
+
+.contact-form {
   display: flex;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-column {
-  flex: 1;
-  margin-right: 10px;
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
 }
-
 
 .form-group label {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 5px;
-  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-button[type="submit"] {
+button[type="submit"]:hover {
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 1);
 }
-.contact-form {
-  font-size: 16px;
+.food-form h1 {
   font-family: "Montserrat", sans-serif;
-  width: 100%;
-  padding: 5px;
-} 
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 100px;
+  margin-top:50px;
+}
+
+
+
 /* food page */
 .food-grid {
   text-align: center;
@@ -418,6 +465,7 @@ button[type="submit"] {
   text-align: center;
   position: relative;
 }
+
 
 .food-card img {
   max-width: 113%;
@@ -459,6 +507,13 @@ button[type="submit"] {
   font-weight: bold;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
+  margin-right:50px;
+  margin-bottom:5px;
+  border-radius:5px;
+  background-color: #FFEDF8;
+  color: black;
+  font-size: 20px;
+  
 }
 .food-focus-page img {
   max-width: 90%;
@@ -527,7 +582,7 @@ button[type="submit"] {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
-  font-size: 45px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
   color: white;
@@ -563,6 +618,39 @@ button[type="submit"] {
   height: 400px;
   margin: 20px 0;
 }
+.blog-focus-page p {
+  font-family: "Montserrat", sans-serif;
+  margin-left:50px;
+  margin-right:50px;
+  margin-bottom:50px;
+  border-radius:5px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-color: #FFEDF8;
+  color: black;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+}
+.blog-focus-page h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-left:50px;
+  margin-right:50px;
+  margin-bottom:50px;
+  border-radius:5px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-color: #FFEDF8;
+  color: black;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+
+}
+
 .blog-focus-card {
   position: relative;
   width: 80%;
@@ -597,15 +685,200 @@ button[type="submit"] {
   color: #fff;
   border-radius: 5px;
 } 
-.blog-card button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+
+
+
+.blog-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
 }
 
+.blog-card1 {
+  text-align: center;
+}
+
+.blog-card1 h2 {
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto 20px;
+}
+.blog-card1 h1 {
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  width: 450px;
+  margin: 0 auto 20px;
+}
+
+.contact-form1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group1 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group1 label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group1 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submitt"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submitt"]:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+
+/* Login.css */
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  margin-bottom:100px;
+}
+
+.login-form input:hover {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  margin-bottom:100px;
+}
+
+.signup-form input:hover {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.signup-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* styles.css */
+
+/* .blog-card button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 8px 20px;
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  
+}
+
+.blog-card button:hover {
+  background-color: lightpink;
+} */
+/* styles.css */
+
+/* styles.css */
+
+.blog-card button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 8px 20px;
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden; /* Animasyonu düzgün çalıştırmak için gerekli */
+}
+
+.blog-card button::before {
+  content: "❤️"; /* Butonun içine kalp emoji ekledik */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: 0;
+  transform: scale(0.2); /* Başlangıç boyutu ve opaklık */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.blog-card button:hover::before {
+  opacity: 1; /* Hover durumunda kalbi görünür hale getirdik */
+  transform: scale(1); /* Hover durumunda kalp boyutunu büyüttük */
+}
 

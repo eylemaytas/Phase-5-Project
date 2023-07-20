@@ -8,7 +8,7 @@ function NewFoodForm({ addFood, updateNewFood }) {
       <div className="food-card1">
         <h2>Add A New Food</h2>
         {formSubmitted ? (
-          <h1>Added New Food To The List</h1>
+          <h1>Thank you for adding a new food!♥</h1>
         ) : (
           <form
             className="contact-form"
@@ -37,7 +37,7 @@ function NewFoodForm({ addFood, updateNewFood }) {
                 name="foodimage"
               ></input>
             </div>
-            <div>
+            <div className="form-group">
               <label htmlFor="description">Description</label>
               <br />
               <input
@@ -53,7 +53,7 @@ function NewFoodForm({ addFood, updateNewFood }) {
               <input
                 onChange={updateNewFood}
                 type="text"
-                id="recom"
+                id="restaurant_recommendation"
                 name="restaurant"
               ></input>
             </div>

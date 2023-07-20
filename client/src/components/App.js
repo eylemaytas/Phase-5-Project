@@ -177,7 +177,7 @@ function App() {
   }
 
   function logoClick() {
-    history.push('/continents')
+    history.push('/home')
   }
 
   function updateFormData(event) {
@@ -237,7 +237,8 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/home">
-          <Homepage continentFocusSelector={continentFocusSelector}/>
+          {/* <Homepage continentFocusSelector={continentFocusSelector}/> */}
+          <ContinentList continentFocusSelector={continentFocusSelector} continents={continents}/>
         </Route>
         <Route exact path="/continents">
           <ContinentList continentFocusSelector={continentFocusSelector} continents={continents}/>
