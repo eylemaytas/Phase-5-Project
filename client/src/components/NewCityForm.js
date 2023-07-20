@@ -123,7 +123,7 @@ function NewCityForm({ addCity, updateFormData }) {
         <h2>Add A New City</h2>
       )}
       <form className="contact-form" onSubmit={handleFormSubmit}>
-        <div className="form-group">
+        <div className="form-group1">
           <div className="form-row">
             <div className="form-column">
               <label htmlFor="cityname">City Name</label>

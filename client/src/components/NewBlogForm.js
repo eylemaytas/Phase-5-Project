@@ -24,7 +24,6 @@ function NewBlogForm({addBlog, updateNewBlog}){
                     <div className="form-group1">
                         <label htmlFor="blogpost">Blog Post</label><br></br>
                         <input onChange={updateNewBlog} type="text" id="blog_post" name="blogpost"></input>
-                        
                     </div>
                         <button type="submitt">Add New Blog Post</button>
                 </form>}

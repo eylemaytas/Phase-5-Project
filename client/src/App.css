@@ -2,11 +2,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* width: 50%; */
   max-width: 50%;
   max-height: 50%;
-  margin-bottom: -70px;
-  margin-top:-120px;
+  margin-bottom: -50px;
+  margin-top:-150px;
 }
 
 
@@ -27,7 +26,8 @@
 }
 
 .nav-bar a:hover {
-  color: #999;
+  /* color: #999; */
+  color:lightpink;
   border-bottom: none;
 }
 .nav-bar button {
@@ -97,6 +97,8 @@
 }
 .continent-grid {
   text-align: center;
+  background-image: linear-gradient(white,pink,red, lightyellow,orange,lightblue,pink);
+
 }
 /* continent focus */
 .continent-focus-page {
@@ -162,6 +164,7 @@
 
 .city-grid {
   text-align: center;
+  background-image: linear-gradient(white,pink,red, lightyellow,orange,lightblue,pink);
 }
 .city-card {
   display: inline-block;
@@ -202,6 +205,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 100px;
+  background-image: linear-gradient(white,pink, lightyellow,orange,lightblue);
 }
 
 .city-form h2 {
@@ -227,17 +231,18 @@
   margin-right: 10px;
 }
 
-.form-group label {
+.form-group1 label {
   font-size: 16px;
   margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
 }
 
-.form-group input {
+.form-group1 input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 button[type="submit"] {
@@ -256,15 +261,6 @@ button[type="submit"]:hover {
   background-color: rgba(0, 0, 0, 1);
 }
 
-
-/* .user-input {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 70px;
-  margin-left: 200px;
-  
-} */
 .user-input {
   display: flex;
   align-items: center;
@@ -335,10 +331,7 @@ button[type="submit"]:hover {
   position: relative;
   width: 80%;
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
-  /* align-items: flex-start; */
-  /* text-align: center; */
   background-color: #2A2B2DFF;
   color: #f2f2f2;
   border-radius: 5px;
@@ -382,6 +375,7 @@ button[type="submit"]:hover {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 100px;
+  background-image: linear-gradient(white,pink, lightyellow,orange,lightblue);
 }
 
 .food-card1 {
@@ -408,12 +402,12 @@ button[type="submit"]:hover {
 }
 
 .form-group {
-  width: 100%;
+  width: 50%;
   margin-bottom: 20px;
 }
 
 .form-group label {
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
 }
@@ -450,11 +444,10 @@ button[type="submit"]:hover {
   margin-top:50px;
 }
 
-
-
 /* food page */
 .food-grid {
   text-align: center;
+  background-image: linear-gradient(white,pink,red, lightyellow,orange,lightblue,pink);
 }
 .food-card {
   display: inline-block;
@@ -465,7 +458,6 @@ button[type="submit"]:hover {
   text-align: center;
   position: relative;
 }
-
 
 .food-card img {
   max-width: 113%;
@@ -589,6 +581,7 @@ button[type="submit"]:hover {
 }
 .blog-grid {
   text-align: center;
+  background-image: linear-gradient(white,white,pink,red, lightyellow,orange,lightblue,pink);
 }
 
 .blog-focus-page {
@@ -697,6 +690,7 @@ button[type="submit"]:hover {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 100px;
+  background-image: linear-gradient(white,white,lightyellow,lightpink,orange);
 }
 
 .blog-card1 {
@@ -766,11 +760,6 @@ button[type="submitt"]:hover {
   background-color: rgba(0, 0, 0, 1);
 }
 
-
-
-
-
-
 /* Login.css */
 
 .login-form {
@@ -825,27 +814,6 @@ button[type="submitt"]:hover {
   cursor: pointer;
 }
 
-/* styles.css */
-
-/* .blog-card button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  padding: 8px 20px;
-  background-color: #f0f0f0;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  
-}
-
-.blog-card button:hover {
-  background-color: lightpink;
-} */
-/* styles.css */
-
-/* styles.css */
 
 .blog-card button {
   font-family: "Montserrat", sans-serif;
@@ -858,11 +826,11 @@ button[type="submitt"]:hover {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: relative;
-  overflow: hidden; /* Animasyonu düzgün çalıştırmak için gerekli */
+  overflow: hidden; 
 }
 
 .blog-card button::before {
-  content: "❤️"; /* Butonun içine kalp emoji ekledik */
+  content: "❤️"; 
   position: absolute;
   top: 0;
   left: 0;
@@ -873,12 +841,12 @@ button[type="submitt"]:hover {
   justify-content: center;
   font-size: 40px;
   opacity: 0;
-  transform: scale(0.2); /* Başlangıç boyutu ve opaklık */
+  transform: scale(0.2); 
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .blog-card button:hover::before {
-  opacity: 1; /* Hover durumunda kalbi görünür hale getirdik */
-  transform: scale(1); /* Hover durumunda kalp boyutunu büyüttük */
+  opacity: 1; 
+  transform: scale(1); 
 }
 
