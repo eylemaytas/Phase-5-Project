@@ -34,7 +34,7 @@ function App() {
     image:"https://i.ebayimg.com/images/g/W9UAAOSw3K1cS4iu/s-l1600.jpg",
     description: "Best thing ever",
     restaurant_recommendation: "A La Lopez",
-    city_id: 1
+    city_id: 1000
   })
   const [focusContinents, setFocusContinents] = useState('')
   const [focusFood, setFocusFood] = useState('')
@@ -169,6 +169,7 @@ function App() {
   function cityFocusSelector(event) {
     setFocusCity(event.target.alt)
     history.push('/cityfocus')
+    // console.log(event.target.alt)
   }
 
   function blogFocusSelector(event) {
@@ -237,7 +238,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/home">
-          {/* <Homepage continentFocusSelector={continentFocusSelector}/> */}
+          <Homepage continentFocusSelector={continentFocusSelector}/>
           <ContinentList continentFocusSelector={continentFocusSelector} continents={continents}/>
         </Route>
         <Route exact path="/continents">
@@ -260,7 +261,7 @@ function App() {
           <FoodFocus focusFood={focusFood} />
         </Route>
         <Route exact path="/cityfocus">
-          <CityFocus focusCity={focusCity}/>
+          <CityFocus key={focusCity} focusCity={focusCity} />
         </Route>
         <Route exact path="/blogfocus">
           <BlogFocus focusBlog={focusBlog} />

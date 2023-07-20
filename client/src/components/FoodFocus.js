@@ -17,6 +17,8 @@ function FoodFocus({focusFood}) {
         )
     }
 
+    
+
     const focusCard = selectedFood.cities.map(city => {
         return <FoodFocusCard key={city.id} city={city}/>
     })
@@ -34,3 +36,5 @@ function FoodFocus({focusFood}) {
 }
 
 export default FoodFocus
+
+
