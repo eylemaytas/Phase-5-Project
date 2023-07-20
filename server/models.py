@@ -33,11 +33,6 @@ class City(db.Model, SerializerMixin):
 
 
 
-    # @validates('description')
-    # def validate_description(self, key, value):
-    #     if not (25 <= len(value) <= 1000):
-    #         raise ValueError('Description must be between 25 and 1000 characters')
-    #     return value
 
 
 class Continent(db.Model, SerializerMixin):

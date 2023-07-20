@@ -191,9 +191,23 @@ class FoodsById(Resource):
             response_body = {'error': 'Food not found'}
             return make_response(jsonify(response_body), 404)
         response_body = food.to_dict()
-        cities_list = [food.city.to_dict()]
+        # cities_list = [food.city.to_dict()]
+        cities_list = []
+        if food.city is not None:
+            cities_list.append(food.city.to_dict())
+
         response_body.update({'cities': cities_list})
         return make_response(jsonify(response_body), 200)
+    
+    def delete(self,id):
+        food = Food.query.filter(Food.id == id).first()
+        if not food:
+            response_body = {'error': 'Food not found'}
+            return make_response(jsonify(response_body), 404)
+        db.session.delete(food)
+        db.session.commit()
+        response_body = {}
+        return make_response(jsonify(response_body), 204)
 
 api.add_resource(FoodsById, '/foods/<int:id>')
 
@@ -300,6 +314,16 @@ class BlogsById(Resource):
         users_list = [blog.user.to_dict()] if blog.user else []
         response_body.update({'users': users_list})
         return make_response(jsonify(response_body), 200)
+    
+    def delete(self,id):
+        blog = Blog.query.filter(Blog.id == id).first()
+        if not blog:
+            response_body = {'error': 'Blog not found'}
+            return make_response(jsonify(response_body), 404)
+        db.session.delete(blog)
+        db.session.commit()
+        response_body = {}
+        return make_response(jsonify(response_body), 204)
     
 api.add_resource(BlogsById, '/blogs/<int:id>')
 
